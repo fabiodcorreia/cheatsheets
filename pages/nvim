@@ -1,0 +1,100 @@
+---
+tags: ["editor"]
+---
+
+# NeoVim
+
+Most of this references are general but some are specific to
+[NvChad](https://nvchad.com)
+
+## Leader
+
+The <leader> is a key that needs to be used as trigger for hotkeys.
+
+<leader> = <space>
+
+## Hotkeys
+
+| Combination | Description               | Notes                            |
+| ----------- | ------------------------- | -------------------------------- |
+| <leader> ff | Open Telescope Find File  |                                  |
+| <leader> f  | Show diagnotics line      | Cursors needs to be on the line  |
+| <leader> /  | Toggle comment line       |                                  |
+| <leader> e  | Focus the file tree pane  |                                  |
+| <leader> b  | Create a new empty buffer |                                  |
+| <leader> x  | Close current buffer      |                                  |
+| <leader> fw | Open Telescope live grep  |                                  |
+| <leader> fm | LSP format                |                                  |
+| <leader> ra | LSP rename                |                                  |
+| <leader> ts | Toggle Symbols panel      |                                  |
+| <leader> tt | Toggle theme              |                                  |
+| <leader> cc | Jump to current context   | Jump to the beginning of a scope |
+| <leader> cm | Open Telescope Git Log    |                                  |
+| <leader> ca | LSP code actions          |                                  |
+| <leader> ls | LSP signature help        |                                  |
+| /           | Search the buffer         | `n` and `N` for next and prev    |
+|             | Search the buffer         |                                  |
+
+## Commands
+
+### Open file
+
+Open a new buffer with a file.
+
+`:e <file-nama>`
+
+### Save
+
+Save the buffer to the file. If the buffer doesn't have a fila associated or if
+we want to save to a different file and keep changing the current one we can
+provide a file name.
+
+`:w` or `:w <file-name>`
+
+### Save as
+
+Save the current buffer in a new file and opens it in a new buffer. The old file
+is not deleted.
+
+`:saveas <file-name>`
+
+### Search and replace on the current line
+
+Replace the `para1` with `para2` on the first match.
+
+`:s/para1/para2` Regex can also be used on `para1`.
+
+`:s/para1/para2/g` Replace all the matches on line
+
+### Search and replace on the current file
+
+Replace all the `para1` with `para2` on the first match of every line.
+
+`:%s/para1/para2` Regex can also be used on `para1`.
+
+`:%s/para1/para2/g` Replace all the matches globaly on the buffer.
+
+### Set buffer filetype
+
+Change the filetype of a buffer
+
+`:set filetype=markdown` or `:Telescope file_types`
+
+
+
+
+
+
+
+i = {
+-- go to beginning and end
+["<C-b>"] = { "<ESC>^i", "Beginning of line" },
+["<C-e>"] = { "<End>", "End of line" },
+
+    -- navigate within insert mode
+    ["<C-h>"] = { "<Left>", "Move left" },
+    ["<C-l>"] = { "<Right>", "Move right" },
+    ["<C-j>"] = { "<Down>", "Move down" },
+    ["<C-k>"] = { "<Up>", "Move up" },
+
+<!--https://ozh.github.io/ascii-tables -->
