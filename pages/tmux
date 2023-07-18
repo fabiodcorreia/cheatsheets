@@ -1,0 +1,32 @@
+---
+tags: [terminal]
+---
+
+# Tmux
+
+## Prefix
+
+The <prefix> is a key combination that needs to be used to trigger commands.
+
+<prefix> = <space> b
+
+## Hotkeys
+
+| Combination | Description               | Notes                           |
+| ----------- | ------------------------- | ------------------------------- |
+| <prefix> "  | Split window vertically   | Horizontal separator            |
+| <prefix> %  | Split window horizontally | Vertical separator              |
+| <prefix> j  | Focus pane below          |                                 |
+| <prefix> k  | Focus pane above          |                                 |
+| <prefix> l  | Focus pane on the right   |                                 |
+| <prefix> h  | Focus pane on the left    |                                 |
+| <prefix> J  | Resize pane down          | Move the separator down         |
+| <prefix> K  | Resize pane up            | Move the separator up           |
+| <prefix> L  | Resize pane to the right  | Move the separator to the right |
+| <prefix> H  | Resize pane to the left   | Move the separator to the left  |
+| <prefix> R  | Reload tmux configuration |                                 |
+| <prefix> x  | Close pane                |                                 |
+| <prefix> I  | Install tmux plugins      |                                 |
+| <prefix> U  | Update tmux plugins       |                                 |
+
+<!--https://ozh.github.io/ascii-tables -->
